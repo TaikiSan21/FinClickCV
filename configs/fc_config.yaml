@@ -1,0 +1,27 @@
+num_classes: 2
+data_dir: 'data'
+label_dir: 'labels'
+label_csv: {
+        'train': 'FinClick_Train.csv'
+        'val': 'FinClick_Val.csv'
+        'test': 'FinClick_Test.csv'
+        }
+
+weighted_sampler: False
+resume: True
+
+model_save_dir: 'r18_original'
+
+norm_mean: [.5, .5, .5]
+norm_sd: [.04, .04, .04]
+
+num_workers: 4
+batch_size: 32
+learning_rate: .05
+weight_decay: .001
+seed: 112188
+num_epochs: 100
+device: cuda
+
+lr_milestones: [20, 50]
+lr_gamma: .1
